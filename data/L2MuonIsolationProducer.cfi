@@ -1,5 +1,5 @@
 module L2MuonIsolation = L2MuonIsolationProducer {
-      untracked string StandAloneCollectionLabel = "l2Muons"
+      untracked string StandAloneCollectionLabel = "L2Muons"
       untracked string CaloTowerCollectionLabel = "towerMaker"
 
       vdouble EtaBounds = { 0.0435, 0.1305, 0.2175, 0.3045, 0.3915, 0.4785, 0.5655, 0.6525, 0.7395, 0.8265, 0.9135, 1.0005, 1.0875, 1.1745, 1.2615, 1.3485, 1.4355, 1.5225, 1.6095, 1.6965, 1.7850, 1.8800, 1.9865, 2.1075, 2.2470, 2.4110 }
