@@ -1,0 +1,19 @@
+module L2MuonIsolation = L2MuonIsolationProducer {
+      untracked string StandAloneCollectionLabel = "L2Muons"
+      untracked string CaloTowerCollectionLabel = "towerMaker"
+
+      vdouble EtaBounds = { 0.0435, 0.1305, 0.2175, 0.3045, 0.3915, 0.4785, 0.5655, 0.6525, 0.7395, 0.8265, 0.9135, 1.0005, 1.0875, 1.1745, 1.2615, 1.3485, 1.4355, 1.5225, 1.6095, 1.6965, 1.7850, 1.8800, 1.9865, 2.1075, 2.2470, 2.4110 }
+      vdouble ConeCuts = { 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24, 0.24 }
+      vdouble EdepCuts = { 5.50, 5.50, 5.90, 5.70, 5.10, 4.90, 5.00, 5.00, 5.10, 5.00, 4.80, 4.80, 4.70, 4.70, 3.50, 3.10, 3.50, 3.90, 3.70, 3.70, 3.50, 3.50, 3.20, 3.30, 3.40, 3.40 }
+
+      double EcalWeight = 1.5
+
+      double Threshold_E = 0.2
+      double Threshold_H = 0.5
+      double dR_Veto_E = 0.07
+      double dR_Veto_H = 0.10
+      double dR_Max = 1.0
+
+      bool Vertex_Constraint_XY = false
+      bool Vertex_Constraint_Z = false
+}
