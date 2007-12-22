@@ -4,6 +4,7 @@
 #include "DataFormats/MuonReco/interface/Direction.h"
 #include "TrackSelector.h"
 #include "DataFormats/Common/interface/Handle.h"
+#include "DataFormats/Common/interface/View.h"
 #include "DataFormats/TrackReco/interface/Track.h"
 #include "DataFormats/TrackReco/interface/TrackFwd.h"
 #include "FWCore/MessageLogger/interface/MessageLogger.h"
@@ -47,7 +48,7 @@ MuIsoDeposit TrackExtractor::deposit(const Event & event, const EventSetup & eve
   deposit.setVeto( veto(muonDir) );
   deposit.addMuonEnergy(muon.pt());
 
-  Handle<TrackCollection> tracksH;
+  Handle<View<Track> > tracksH;
   event.getByLabel(theTrackCollectionTag, tracksH);
   //  const TrackCollection tracks = *(tracksH.product());
   LogTrace(metname)<<"***** TRACK COLLECTION SIZE: "<<tracksH->size();
