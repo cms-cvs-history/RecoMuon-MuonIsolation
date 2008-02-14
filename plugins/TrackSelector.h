@@ -13,8 +13,10 @@ class TrackSelector {
 public:
 
   typedef muonisolation::Range<float> Range;
+  typedef reco::TrackBase::Point BeamPoint;
 
-  TrackSelector(const Range & z, float r, const Direction &dir, float drMax);
+  TrackSelector(const Range & z, float r, const Direction &dir, float drMax,
+		const BeamPoint& point = BeamPoint(0,0,0));
   reco::TrackCollection operator()(const reco::TrackCollection & tracks) const;
 
 
@@ -23,6 +25,8 @@ private:
   Range theR;
   Direction theDir;
   float theDR_Max;
+
+  BeamPoint theBeamPoint;
 
 }; 
 
